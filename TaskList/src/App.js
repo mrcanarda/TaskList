@@ -24,10 +24,10 @@ function App() {
     setTasks(afterDeletingTasks);
   };
 
-  const editTaskById = (id, updatedTitle, updateTaskDesc) => {
+  const editTaskById = (id, updatedTitle, updatedTaskDesc) => {
     const updatedTasks = tasks.map((task) => {
       if (task.id === id) {
-        return { id, title: updatedTitle, taskDesc: updateTaskDesc };
+        return { id, title: updatedTitle, taskDesc: updatedTaskDesc };
       }
       return task;
     });
@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="App">
       <TaskCreate onCreate={createTask} />
-      <h1>Missions</h1>
+      <h3>Missions</h3>
       <TaskList
         tasks={tasks}
         onDelete={deleteTaskById}

@@ -4,6 +4,8 @@ function TaskCreate({ onCreate, task, taskformUpdate, onUpdate }) {
   const [title, setTitle] = useState(task ? task.title : "");
   const [taskDesc, setTaskDesc] = useState(task ? task.taskDesc : "");
 
+  //   console.log(taskDesc, title);
+
   const handleChange = (event) => {
     setTitle(event.target.value);
   };
@@ -19,24 +21,23 @@ function TaskCreate({ onCreate, task, taskformUpdate, onUpdate }) {
     } else {
       onCreate(title, taskDesc);
     }
-
     setTitle("");
     setTaskDesc("");
   };
-
   return (
     <div>
+      {" "}
       {taskformUpdate ? (
         <div className="task-update">
-          <h3>Please Edit The Task</h3>
+          <h3>Please Edit the Text</h3>
           <form className="task-form">
-            <label className="task-label">Please Edit The Header</label>
+            <label className="task-label">Edit the Header</label>
             <input
               value={title}
               onChange={handleChange}
               className="task-input"
             />
-            <label className="task-label">Please Edit The Text</label>
+            <label className="task-label">Edit the Text!</label>
             <textarea
               value={taskDesc}
               onChange={handleTaskChange}
@@ -53,7 +54,7 @@ function TaskCreate({ onCreate, task, taskformUpdate, onUpdate }) {
         </div>
       ) : (
         <div className="task-create">
-          <h3>Please add a Text!</h3>
+          <h3>Please Add a Text</h3>
           <form className="task-form">
             <label className="task-label">Header</label>
             <input
@@ -61,7 +62,7 @@ function TaskCreate({ onCreate, task, taskformUpdate, onUpdate }) {
               onChange={handleChange}
               className="task-input"
             />
-            <label className="task-label">Add Text</label>
+            <label className="task-label">Add to Text</label>
             <textarea
               value={taskDesc}
               onChange={handleTaskChange}

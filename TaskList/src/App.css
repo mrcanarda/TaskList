@@ -8,17 +8,13 @@
   width: 450px;
 }
 
-.task-update {
-  width: 100%;
-}
-
 .task-form {
   display: flex;
   flex-direction: column;
 }
 
 .task-label {
-  margin: 10px 0;
+  margin: 10px 0px;
 }
 
 .task-input {
@@ -28,18 +24,24 @@
 }
 
 .task-button {
-  border: 1px solid green;
-  margin: 10px 0;
+  border: 1px solid blue;
+  margin: 10px 0px;
   padding: 10px;
-  background-color: green;
-  color: #fff;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
   border-radius: 10px;
   font-size: 20px;
-  cursor: pointer;
 }
 
-.update-button {
-  background-color: blueviolet;
+.task-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-title {
+  margin-bottom: 5px;
 }
 
 .task-list {
@@ -49,7 +51,7 @@
 }
 
 .task-show {
-  border: 1px solid green;
+  border: 2px solid blue;
   border-radius: 30px;
   width: 350px;
   padding: 20px;
@@ -59,10 +61,6 @@
   margin: 20px;
 }
 
-.task-title {
-  margin-bottom: 5px;
-}
-
 .task-edit {
   padding: 5px;
   font-size: 15px;
@@ -70,19 +68,18 @@
   border: none;
   border-radius: 30px;
   background-color: blue;
-  color: #fff;
-  cursor: pointer;
+  color: white;
   margin-right: 10px;
+  cursor: pointer;
 }
-
 .task-delete {
   padding: 5px;
   font-size: 15px;
-  width: 60px;
+  width: 100px;
   border: none;
   border-radius: 30px;
   background-color: red;
-  color: #fff;
+  color: white;
   margin-right: 10px;
   cursor: pointer;
 }
